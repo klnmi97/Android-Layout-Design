@@ -2,7 +2,7 @@
 <!-- TODO (17) Surround the Constraint layout with a ScrollView -->
 <!-- TODO (2) Replace the Relative layout with a ConstraintLayout -->
 <ScrollView
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <android.support.constraint.ConstraintLayout
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- TODO (3) Create a TextView for the Passenger label and name -->
+        <!-- DONE (3) Create a TextView for the Passenger label and name -->
         <TextView
             android:id="@+id/textViewPassengerLabel"
             android:layout_width="wrap_content"
@@ -30,12 +30,11 @@
             android:id="@+id/textViewPassengerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            tools:text="@string/passenger_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="@+id/textViewPassengerLabel"
             app:layout_constraintTop_toBottomOf="@+id/textViewPassengerLabel"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@color/colorPrimary"/>
+            tools:text="@string/passenger_name" />
 
         <ImageView
             android:id="@+id/leftRectangle"
@@ -135,7 +134,7 @@
             android:id="@+id/textViewDepartureLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/departure_time_label"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -177,9 +176,9 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:layout_marginTop="8dp"
             android:text="@string/arrival_time_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -201,10 +200,9 @@
             android:layout_marginTop="32dp"
             android:background="@color/colorPrimaryLight"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDeparture"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/textViewDeparture" />
 
         <ImageView
             android:id="@+id/tableImage"
@@ -307,31 +305,17 @@
             android:textAlignment="center"
             android:layout_width="120dp" />
 
-        <!-- TODO (4) Use tool:text to set the text value -->
-
-        <!-- TODO (5) Create an ImageView for the left rectangle -->
-        <!-- TODO (6) Set the background to the shape_rectangle_stroke drawable -->
-
-        <!-- TODO (7) Create an ImageView for the divider -->
-
-        <!-- TODO (8) Create an ImageView for the rightRectangle -->
-
-        <!-- TODO (9) Create a TextView for the origin code, the destination code and the flight code -->
-
-        <!-- TODO (15) Import the plane image SVG file into the drawable directory and name it art_plane -->
-        <!-- TODO (16) Create an ImageView for the plane and set the background to art_plane drawable -->
-
-        <!-- TODO ! (10) Create a TextView for the time texts and their corresponding labels -->
-
-        <!-- TODO (11) Create an ImageView for the blue table's header -->
-
-        <!-- TODO (12) Create an ImageView for the blue table's body -->
-
-        <!-- TODO (13) Create a TextView for each of the labels and text fields in the blue table -->
-
-        <!-- TODO (14) Create an ImageView for the barcode -->
-
-
+        <ImageView
+            android:id="@+id/barCode"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGate"
+            app:srcCompat="@mipmap/barcode" />
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>
