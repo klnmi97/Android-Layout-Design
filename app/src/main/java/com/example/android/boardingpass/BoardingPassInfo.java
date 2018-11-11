@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by mihae on 10/28/2018.
+ * Created by Michael Klunko on 10/28/2018.
  */
 
 public class BoardingPassInfo {
